@@ -18,6 +18,18 @@ let result = {
         booleans : []
 };
 
+function printArray(array){
+    let output = 'var input = [';
+    for(let item in array){
+        output += item +', ';
+    }
+
+    output.slice(0, output.length-2);
+    output += '];<br>';
+
+    return output;
+}
+
 function arrayToObject(array) {
 
     let strings = '';
@@ -52,4 +64,5 @@ function printObject(object){
 }
 
 let output = arrayToObject(input);
+document.write(printArray(input));
 document.write(printObject(output));
